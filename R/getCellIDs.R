@@ -1,4 +1,4 @@
-getCellIDs = function(lat1, lon1, lat2, lon2) {
+getCellIDs = function(lat1, lon1, lat2, lon2, min_level = 0, max_level = 30) {
 
   library(reticulate)
 
@@ -10,6 +10,8 @@ getCellIDs = function(lat1, lon1, lat2, lon2) {
   p2 = s2sphere$LatLng$from_degrees(lat2, lon2)
 
   r = s2sphere$RegionCoverer()
+  r$min_level = min_level
+  r$max_level = max_level
   cell_ids = r$get_covering(s2sphere$LatLngRect$from_point_pair(p1, p2))
   cell_ids
 }
