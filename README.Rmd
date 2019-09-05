@@ -47,13 +47,19 @@ p1 = s2sphere.LatLng.from_degrees(33, -122)
 p2 = s2sphere.LatLng.from_degrees(33.1, -122.1)
 cell_ids = r.get_covering(s2sphere.LatLngRect.from_point_pair(p1, p2))
 print(cell_ids)
-
-p._LatLng__coords
-p1._LatLng__coords
-p1.lat()
 ```
 
+## In R
+
+Proof of concept to reproduce the above code using reticulate:
+
 ```{r}
+library(s2sphere)
+getCellIDs(33, -122, 33.1, -122.1)
+```
+
+
+```{r, echo=FALSE, eval=FALSE}
 library(reticulate)
 s2s = import("s2sphere")
 latlng = s2s$LatLng(33, -122)
@@ -66,8 +72,7 @@ s2sphere::LatLng(c(3, 9))
 
 
 
-```{r lib}
-# library(s2sphere)
+```{r lib, echo=FALSE}
 # ## basic example code
 # p1 = s2s$convert
 # os <- import("os")

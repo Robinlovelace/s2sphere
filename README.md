@@ -40,110 +40,36 @@ p2 = s2sphere.LatLng.from_degrees(33.1, -122.1)
 cell_ids = r.get_covering(s2sphere.LatLngRect.from_point_pair(p1, p2))
 print(cell_ids)
 #> [CellId: 80f0694000000000, CellId: 80f06b4000000000, CellId: 80f06bc000000000, CellId: 80f06d0000000000, CellId: 80f06e4000000000, CellId: 80f06ec000000000, CellId: 80f0724000000000, CellId: 80f072c000000000]
-p._LatLng__coords
-#> (33, -122)
-p1._LatLng__coords
-#> (0.5759586531581288, -2.129301687433082)
-p1.lat()
-#> Angle: 0.5759586531581288
 ```
 
-``` r
-library(reticulate)
-s2s = import("s2sphere")
-latlng = s2s$LatLng(33, -122)
-s2s
-#> Module(s2sphere)
-class(latlng)
-#> [1] "s2sphere.sphere.LatLng" "python.builtin.object"
-s2sphere::LatLng(c(3, 9))
-#> Warning in grep(name, row.names(info)): argument 'pattern' has length > 1
-#> and only the first element will be used
-#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
-#> length > 1 and only the first element will be used
+## In R
 
-#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
-#> length > 1 and only the first element will be used
-
-#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
-#> length > 1 and only the first element will be used
-
-#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
-#> length > 1 and only the first element will be used
-
-#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
-#> length > 1 and only the first element will be used
-
-#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
-#> length > 1 and only the first element will be used
-
-#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
-#> length > 1 and only the first element will be used
-
-#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
-#> length > 1 and only the first element will be used
-
-#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
-#> length > 1 and only the first element will be used
-
-#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
-#> length > 1 and only the first element will be used
-
-#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
-#> length > 1 and only the first element will be used
-
-#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
-#> length > 1 and only the first element will be used
-
-#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
-#> length > 1 and only the first element will be used
-
-#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
-#> length > 1 and only the first element will be used
-
-#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
-#> length > 1 and only the first element will be used
-
-#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
-#> length > 1 and only the first element will be used
-
-#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
-#> length > 1 and only the first element will be used
-
-#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
-#> length > 1 and only the first element will be used
-
-#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
-#> length > 1 and only the first element will be used
-
-#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
-#> length > 1 and only the first element will be used
-
-#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
-#> length > 1 and only the first element will be used
-
-#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
-#> length > 1 and only the first element will be used
-
-#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
-#> length > 1 and only the first element will be used
-
-#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
-#> length > 1 and only the first element will be used
-
-#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
-#> length > 1 and only the first element will be used
-
-#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
-#> length > 1 and only the first element will be used
-#> Warning in sub(paste0("\\.", class, "$"), "", row.names(info)): argument
-#> 'pattern' has length > 1 and only the first element will be used
-#> Angle: 0.05235987755982989
-```
+Proof of concept to reproduce the above code using reticulate:
 
 ``` r
-# library(s2sphere)
-# ## basic example code
-# p1 = s2s$convert
-# os <- import("os")
+library(s2sphere)
+getCellIDs(33, -122, 33.1, -122.1)
+#> [[1]]
+#> CellId: 80f0694000000000
+#> 
+#> [[2]]
+#> CellId: 80f06b4000000000
+#> 
+#> [[3]]
+#> CellId: 80f06bc000000000
+#> 
+#> [[4]]
+#> CellId: 80f06d0000000000
+#> 
+#> [[5]]
+#> CellId: 80f06e4000000000
+#> 
+#> [[6]]
+#> CellId: 80f06ec000000000
+#> 
+#> [[7]]
+#> CellId: 80f0724000000000
+#> 
+#> [[8]]
+#> CellId: 80f072c000000000
 ```
