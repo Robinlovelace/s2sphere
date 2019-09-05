@@ -33,6 +33,8 @@ import s2sphere
 
 r = s2sphere.RegionCoverer()
 p = s2sphere.LatLng(33, -122)
+p
+#> LatLng: 1890.7607239317167,-6990.085100596043
 p1 = s2sphere.LatLng.from_degrees(33, -122)
 p2 = s2sphere.LatLng.from_degrees(33.1, -122.1)
 cell_ids = r.get_covering(s2sphere.LatLngRect.from_point_pair(p1, p2))
@@ -54,6 +56,89 @@ s2s
 #> Module(s2sphere)
 class(latlng)
 #> [1] "s2sphere.sphere.LatLng" "python.builtin.object"
+s2sphere::LatLng(c(3, 9))
+#> Warning in grep(name, row.names(info)): argument 'pattern' has length > 1
+#> and only the first element will be used
+#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
+#> length > 1 and only the first element will be used
+
+#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
+#> length > 1 and only the first element will be used
+
+#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
+#> length > 1 and only the first element will be used
+
+#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
+#> length > 1 and only the first element will be used
+
+#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
+#> length > 1 and only the first element will be used
+
+#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
+#> length > 1 and only the first element will be used
+
+#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
+#> length > 1 and only the first element will be used
+
+#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
+#> length > 1 and only the first element will be used
+
+#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
+#> length > 1 and only the first element will be used
+
+#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
+#> length > 1 and only the first element will be used
+
+#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
+#> length > 1 and only the first element will be used
+
+#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
+#> length > 1 and only the first element will be used
+
+#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
+#> length > 1 and only the first element will be used
+
+#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
+#> length > 1 and only the first element will be used
+
+#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
+#> length > 1 and only the first element will be used
+
+#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
+#> length > 1 and only the first element will be used
+
+#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
+#> length > 1 and only the first element will be used
+
+#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
+#> length > 1 and only the first element will be used
+
+#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
+#> length > 1 and only the first element will be used
+
+#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
+#> length > 1 and only the first element will be used
+
+#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
+#> length > 1 and only the first element will be used
+
+#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
+#> length > 1 and only the first element will be used
+
+#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
+#> length > 1 and only the first element will be used
+
+#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
+#> length > 1 and only the first element will be used
+
+#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
+#> length > 1 and only the first element will be used
+
+#> Warning in grep(pattern, all.names, value = TRUE): argument 'pattern' has
+#> length > 1 and only the first element will be used
+#> Warning in sub(paste0("\\.", class, "$"), "", row.names(info)): argument
+#> 'pattern' has length > 1 and only the first element will be used
+#> Angle: 0.05235987755982989
 ```
 
 ``` r
