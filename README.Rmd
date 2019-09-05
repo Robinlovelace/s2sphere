@@ -1,0 +1,62 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# s2sphere
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of s2sphere is to demo geographic operations in the s2 library
+
+## Installation
+
+```{r, eval=FALSE}
+remotes::install_github("robinlovelace/s2sphere")
+```
+
+
+<!-- You can install the released version of s2sphere from [CRAN](https://CRAN.R-project.org) with: -->
+
+<!-- ``` r -->
+<!-- install.packages("s2sphere") -->
+<!-- ``` -->
+
+## In python
+
+Here's how it works in Python
+
+```{python}
+import s2sphere
+
+r = s2sphere.RegionCoverer()
+p = s2sphere.LatLng(33, -122)
+p1 = s2sphere.LatLng.from_degrees(33, -122)
+p2 = s2sphere.LatLng.from_degrees(33.1, -122.1)
+cell_ids = r.get_covering(s2sphere.LatLngRect.from_point_pair(p1, p2))
+print(cell_ids)
+
+p._LatLng__coords
+p1._LatLng__coords
+p1.lat()
+```
+
+
+
+```{r lib}
+library(s2sphere)
+## basic example code
+```
+
+
