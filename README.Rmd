@@ -58,17 +58,18 @@ s2s = import("s2sphere")
 latlng = s2s$LatLng(33, -122)
 s2s
 class(latlng)
-reticulate::conv
+
+
 ```
 
 
 
 
 ```{r lib}
-library(s2sphere)
-## basic example code
-p1 = s2s$convert
-os <- import("os")
+# library(s2sphere)
+# ## basic example code
+# p1 = s2s$convert
+# os <- import("os")
 ```
 
 

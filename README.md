@@ -47,6 +47,18 @@ p1.lat()
 ```
 
 ``` r
-library(s2sphere)
-## basic example code
+library(reticulate)
+s2s = import("s2sphere")
+latlng = s2s$LatLng(33, -122)
+s2s
+#> Module(s2sphere)
+class(latlng)
+#> [1] "s2sphere.sphere.LatLng" "python.builtin.object"
+```
+
+``` r
+# library(s2sphere)
+# ## basic example code
+# p1 = s2s$convert
+# os <- import("os")
 ```
